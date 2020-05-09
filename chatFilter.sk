@@ -1,0 +1,7 @@
+on chat:
+  if message is "/say pretzel":
+    cancel event
+    message "&6-----------------------------------------"
+    message "&c&lSwearing and attempting to circumvent the filter"
+    message "&c&lare against the rules."
+    message "&6-----------------------------------------"       

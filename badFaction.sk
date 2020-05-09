@@ -1,0 +1,17 @@
+function badFaction(c: text, a: text) :: boolean:
+  if {_c} regex matches "(f|factions)":
+    if {_a} regex matches "create.*":
+      if {_a} regex matches ".*(Athens|Argos|Corinth|Syracuse|Sparta|Thebes)":
+        return false
+      else:
+        return true
+    else:
+      return false
+  else:
+    return false
+
+
+on command:
+  if badFaction(command, arguments) = true:
+    cancel event
+    send "Sorry, that Faction name isn't valid. Please choose from &2names."

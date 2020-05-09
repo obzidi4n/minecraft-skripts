@@ -1,0 +1,4 @@
+on script load:
+  load yaml "/plugins/Factions/faction_names.yml" as "faction_names"
+  set {_list::*} to all yaml nodes of "faction_names.faction_names"
+  broadcast "%{_list::*}%"
